@@ -8,17 +8,31 @@
 #include <chrono>
 
 using namespace std;
-
+class Scoreboard{
+private:
+    int points;
+    string name;
+public:
+    //gets
+    //sets
+};
 bool random_characters();
 int get_rand_ascii_value();
+//float calculate_wpm();
+//void stats_page();
+    //show wpm, accuracy, # of errors, # of correct inputs, highest streak
+//int point_addition();
+//int point_multiplier();
+//int point_deductor();
+
 
 
 int main(){
-  random_characters();
-  system("CLS");
-  random_characters();
-  system("CLS");
-  return 0;
+    random_characters();
+    system("CLS");
+    random_characters();
+    system("CLS");
+    return 0;
 }
 
 int get_rand_ascii_value() {
