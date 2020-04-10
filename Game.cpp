@@ -46,6 +46,10 @@ float Game:: get_duration(){
     return duration;
 }
 
+int Game:: get_streak(){
+    return streak;
+}
+
 bool Game:: get_rw_answer(){
     return right_wrong_answer;
 }
@@ -90,11 +94,16 @@ void Game:: reset_streak(){
 }
 
 void Game:: add_points() {
-    if(right_wrong_answer){
-        if(duration <= 1){
-            points += 10;
+    if(get_rw_answer()){
+        if(get_duration() <= 1){
+            if(get_streak() >= 5){
+                points += 15;
+            }
+            else {
+                points += 10;
+            }
         }
-        else if(duration > 1 && duration <= 3){
+        else if(get_duration() > 1 && get_duration() <= 3){
             points += 7;
         }
         else{

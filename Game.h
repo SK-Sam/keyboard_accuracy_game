@@ -26,16 +26,18 @@ public:
     //Getters
     bool get_rw_answer();
     float get_duration();
+    int get_streak();
+
     //Setters
     void set_duration(float &);
     void set_name(string);
-
-    void add_to_correct_characters_per_game();
-    void random_characters();
-    int get_rand_ascii_value();
     void add_points();
+    void add_to_correct_characters_per_game();
     void streak_counter();
     void reset_streak();
+
+    void random_characters();
+    int get_rand_ascii_value();
 
 private:
     int points;
