@@ -24,7 +24,7 @@ int main(){
     Game game;
     game.random_characters();
     system("CLS");
-    cout << game.get_duration();
+    cout << game.get_duration() << " seconds.";
     cin.ignore();
     return 0;
 }

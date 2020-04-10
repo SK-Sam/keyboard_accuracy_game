@@ -18,16 +18,27 @@ using namespace std;
 
 class Game {
 public:
-    bool random_characters();
-    int get_rand_ascii_value();
-    int point_multiplier();
-    void point_deductor();
-    void set_duration(float &);
+    //Constructors
+   Game();
+    Game(string n);
+    Game(const Game &source);
+
+    //Getters
+    bool get_rw_answer();
     float get_duration();
+    //Setters
+    void set_duration(float &);
+    void set_name(string);
+
+    void random_characters();
+    int get_rand_ascii_value();
+    void add_points(bool);
 
 private:
-    int point_reward;
+    int points;
     float duration;
+    bool right_wrong_answer;
+    string name;
 };
 
 
