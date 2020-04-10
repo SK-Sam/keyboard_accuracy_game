@@ -5,7 +5,7 @@
 #ifndef KEYBOARD_ACCURACY_GAME_GAME_H
 #define KEYBOARD_ACCURACY_GAME_GAME_H
 #include <iostream>
-#include<string>
+#include <string>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -30,15 +30,20 @@ public:
     void set_duration(float &);
     void set_name(string);
 
+    void add_to_correct_characters_per_game();
     void random_characters();
     int get_rand_ascii_value();
-    void add_points(bool);
+    void add_points();
+    void streak_counter();
+    void reset_streak();
 
 private:
     int points;
     float duration;
     bool right_wrong_answer;
     string name;
+    int num_of_correct_characters_per_game;
+    int streak;
 };
 
 

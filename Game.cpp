@@ -50,19 +50,25 @@ bool Game:: get_rw_answer(){
     return right_wrong_answer;
 }
 
+void Game:: add_to_correct_characters_per_game(){
+    num_of_correct_characters_per_game++;
+}
 
 void Game:: random_characters() {
     int char_ascii_value{get_rand_ascii_value()};
-     auto start = chrono::high_resolution_clock::now();
+    auto start = chrono::high_resolution_clock::now();
     cout << (char)char_ascii_value << endl;
     int user_input = getch();
     if(user_input == char_ascii_value) {
         cout << "It worked";
-         auto end = chrono::high_resolution_clock::now();
-         chrono::duration<float> durations = end - start;
-         float temp_dur = durations.count();
-         set_duration(temp_dur);
+        auto end = chrono::high_resolution_clock::now();
+        chrono::duration<float> durations = end - start;
+        float temp_dur = durations.count();
+        set_duration(temp_dur);
         right_wrong_answer = true;
+        add_to_correct_characters_per_game();
+        add_points();
+        streak_counter();
     }
     else{
         cout << "It failed";
@@ -71,11 +77,28 @@ void Game:: random_characters() {
         float temp_dur = durations.count();
         set_duration(temp_dur);
         right_wrong_answer = false;
+        reset_streak();
     }
 }
 
-void Game:: add_points(bool answer) {
-    if(answer) {
-        points += 10;
+void Game:: streak_counter(){
+    streak++;
+}
+
+void Game:: reset_streak(){
+    streak = 0;
+}
+
+void Game:: add_points() {
+    if(right_wrong_answer){
+        if(duration <= 1){
+            points += 10;
+        }
+        else if(duration > 1 && duration <= 3){
+            points += 7;
+        }
+        else{
+            points += 4;
+        }
     }
 }

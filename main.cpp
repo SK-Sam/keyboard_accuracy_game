@@ -15,12 +15,14 @@ using namespace std::literals::chrono_literals;
 //float calculate_wpm();
 //void stats_page();
     //show wpm, accuracy, # of errors, # of correct inputs, highest streak
-//int point_addition();
 //int point_multiplier();
 //int point_deductor();
 
 
 int main(){
+    cout << "Welcome to Typing Statistics! Please enter your first name.\n";
+    string temp_name{};
+    cin >> temp_name;
     Game game;
     game.random_characters();
     system("CLS");
