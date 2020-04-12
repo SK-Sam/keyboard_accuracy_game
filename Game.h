@@ -27,6 +27,8 @@ public:
     bool get_rw_answer();
     float get_duration();
     int get_streak();
+    bool get_readiness_to_play();
+    float get_game_duration();
 
     //Setters
     void set_duration(float &);
@@ -35,21 +37,25 @@ public:
     void add_to_correct_characters_per_game();
     void streak_counter();
     void reset_streak();
+    void set_readiness_to_play(bool);
+    void add_game_duration(float);
 
     void random_characters();
     int get_rand_ascii_value();
     void countdown();
 
     //Game strings
-    const string greeting = "Welcome to Typing Statistics. Please enter your first name.\n";
+    void greet();
 
 private:
     int points;
     float duration;
+    float game_duration = 0;
     bool right_wrong_answer;
     string name;
     int num_of_correct_characters_per_game;
     int streak;
+    bool ready_to_play;
 };
 
 

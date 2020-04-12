@@ -21,16 +21,17 @@ using namespace std::literals::chrono_literals;
 
 int main(){
     Game game;
-    cout << game.greeting;
+    game.greet();
     string player_name{};
     cin >> player_name;
     game.set_name(player_name);
     game.countdown();
     system("CLS");
-
-    game.random_characters();
-    system("CLS");
-    cout << game.get_duration() << " seconds.";
-    cin.ignore();
+    //Game phase ready
+    game.set_readiness_to_play(true);
+    while(game.get_game_duration() < 60) {
+        game.random_characters();
+        system("CLS");
+    }
     return 0;
 }

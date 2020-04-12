@@ -40,8 +40,20 @@ void Game:: set_duration(float &dur) {
     duration = dur;
 }
 
+void Game:: add_game_duration(float dur){
+    game_duration += dur;
+}
+
 void Game:: set_name(string n){
     name = n;
+}
+
+void Game:: set_readiness_to_play(bool ready){
+    ready_to_play = ready;
+}
+
+bool Game:: get_readiness_to_play(){
+    return ready_to_play;
 }
 
 float Game:: get_duration(){
@@ -56,12 +68,22 @@ bool Game:: get_rw_answer(){
     return right_wrong_answer;
 }
 
+float Game:: get_game_duration(){
+    return game_duration;
+}
+
 void Game:: add_to_correct_characters_per_game(){
     num_of_correct_characters_per_game++;
 }
 
+void Game::greet(){
+    cout << "Welcome to Typing Statistics. Please enter your first name.\n";
+}
+
 void Game::countdown(){
+    Sleep(1000);
     cout << "Get ready to start typing in...\n";
+    Sleep(500);
     cout << "3...\n";
     Sleep(1000);
     cout << "2...\n";
@@ -73,7 +95,7 @@ void Game::countdown(){
 void Game:: random_characters() {
     int char_ascii_value{get_rand_ascii_value()};
     auto start = chrono::high_resolution_clock::now();
-    cout << (char)char_ascii_value << endl;
+    cout << "\n\n\n" << (char)char_ascii_value << endl;
     int user_input = getch();
     if(user_input == char_ascii_value) {
         cout << "It worked";
@@ -81,6 +103,7 @@ void Game:: random_characters() {
         chrono::duration<float> durations = end - start;
         float temp_dur = durations.count();
         set_duration(temp_dur);
+        add_game_duration(temp_dur);
         right_wrong_answer = true;
         add_to_correct_characters_per_game();
         add_points();
@@ -92,6 +115,7 @@ void Game:: random_characters() {
         chrono::duration<float> durations = end - start;
         float temp_dur = durations.count();
         set_duration(temp_dur);
+        add_game_duration(temp_dur);
         right_wrong_answer = false;
         reset_streak();
     }
