@@ -20,10 +20,14 @@ using namespace std::literals::chrono_literals;
 
 
 int main(){
-    cout << "Welcome to Typing Statistics! Please enter your first name.\n";
-    string temp_name{};
-    cin >> temp_name;
     Game game;
+    cout << game.greeting;
+    string player_name{};
+    cin >> player_name;
+    game.set_name(player_name);
+    game.countdown();
+    system("CLS");
+
     game.random_characters();
     system("CLS");
     cout << game.get_duration() << " seconds.";

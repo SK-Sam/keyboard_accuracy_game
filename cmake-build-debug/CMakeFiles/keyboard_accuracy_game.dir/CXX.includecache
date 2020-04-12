@@ -6,6 +6,34 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/yeosa/Desktop/keyboard_accuracy_game/Game.cpp
+Game.h
+C:/Users/yeosa/Desktop/keyboard_accuracy_game/Game.h
+iostream
+-
+string
+-
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+conio.h
+-
+random
+-
+chrono
+-
+Scoreboard.h
+C:/Users/yeosa/Desktop/keyboard_accuracy_game/Scoreboard.h
+Game.h
+C:/Users/yeosa/Desktop/keyboard_accuracy_game/Game.h
+thread
+-
+windows.h
+-
+
 C:/Users/yeosa/Desktop/keyboard_accuracy_game/Game.h
 iostream
 -

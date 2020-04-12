@@ -13,6 +13,8 @@
 #include <chrono>
 #include "Scoreboard.h"
 #include "Game.h"
+#include <thread>
+#include <windows.h>
 using namespace std;
 
 Game::Game()
@@ -56,6 +58,16 @@ bool Game:: get_rw_answer(){
 
 void Game:: add_to_correct_characters_per_game(){
     num_of_correct_characters_per_game++;
+}
+
+void Game::countdown(){
+    cout << "Get ready to start typing in...\n";
+    cout << "3...\n";
+    Sleep(1000);
+    cout << "2...\n";
+    Sleep(1000);
+    cout << "1...\n";
+    Sleep(1000);
 }
 
 void Game:: random_characters() {

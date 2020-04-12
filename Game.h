@@ -19,7 +19,7 @@ using namespace std;
 class Game {
 public:
     //Constructors
-   Game();
+    Game();
     Game(string n);
     Game(const Game &source);
 
@@ -38,6 +38,10 @@ public:
 
     void random_characters();
     int get_rand_ascii_value();
+    void countdown();
+
+    //Game strings
+    const string greeting = "Welcome to Typing Statistics. Please enter your first name.\n";
 
 private:
     int points;
