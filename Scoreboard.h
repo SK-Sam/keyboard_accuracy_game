@@ -4,17 +4,26 @@
 
 #ifndef KEYBOARD_ACCURACY_GAME_SCOREBOARD_H
 #define KEYBOARD_ACCURACY_GAME_SCOREBOARD_H
-#include <string>
 #include <iostream>
+#include <string>
+#include <conio.h>
+#include <random>
+#include <chrono>
+#include <thread>
+#include "Game.h"
 using namespace std;
+using namespace std::literals::chrono_literals;
 
 class Scoreboard{
 private:
-    int points;
-    string name;
+    float lpm;
+    float accuracy;
+
 public:
-    //gets
-    //sets
+    void calculate_lpm(Game game);
+    void calculate_accuracy();
+    void display_stats();
+
 };
 
 

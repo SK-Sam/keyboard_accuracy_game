@@ -18,6 +18,8 @@ using namespace std;
 
 class Game {
 public:
+    friend class Scoreboard;
+
     //Constructors
     Game();
     Game(string n);

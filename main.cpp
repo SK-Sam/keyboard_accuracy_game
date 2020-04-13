@@ -15,9 +15,6 @@ using namespace std::literals::chrono_literals;
 //float calculate_wpm();
 //void stats_page();
     //show wpm, accuracy, # of errors, # of correct inputs, highest streak
-//int point_multiplier();
-//int point_deductor();
-
 
 int main(){
     Game game;
