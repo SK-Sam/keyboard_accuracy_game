@@ -72,8 +72,24 @@ float Game:: get_game_duration(){
     return game_duration;
 }
 
+int Game:: get_points() {
+    return points;
+}
+
+int Game:: get_characters_correct(){
+    return num_of_correct_characters_per_game;
+}
+
+int Game:: get_characters_incorrect(){
+    return num_of_incorrect_characters_per_game;
+}
+
 void Game:: add_to_correct_characters_per_game(){
     num_of_correct_characters_per_game++;
+}
+
+void Game:: add_to_incorrect_characters_per_game(){
+    num_of_incorrect_characters_per_game++;
 }
 
 void Game::greet(){
@@ -98,7 +114,6 @@ void Game:: random_characters() {
     cout << "\n\n\n" << (char)char_ascii_value << endl;
     int user_input = getch();
     if(user_input == char_ascii_value) {
-        cout << "It worked";
         auto end = chrono::high_resolution_clock::now();
         chrono::duration<float> durations = end - start;
         float temp_dur = durations.count();
@@ -110,13 +125,13 @@ void Game:: random_characters() {
         streak_counter();
     }
     else{
-        cout << "It failed";
         auto end = chrono::high_resolution_clock::now();
         chrono::duration<float> durations = end - start;
         float temp_dur = durations.count();
         set_duration(temp_dur);
         add_game_duration(temp_dur);
         right_wrong_answer = false;
+        add_to_incorrect_characters_per_game();
         reset_streak();
     }
 }
@@ -127,6 +142,22 @@ void Game:: streak_counter(){
 
 void Game:: reset_streak(){
     streak = 0;
+}
+
+void Game:: display_streak(){
+    cout << "                                        Current Streak:     " << get_streak();
+}
+
+void Game:: display_points(){
+    cout << "\n                                        Current Points:     " << get_points();
+}
+
+void Game:: display_characters_correct(){
+    cout << "\n                                        Current # correct:  " << get_characters_correct();
+}
+
+void Game:: display_characters_incorrect(){
+    cout << "\n                                        Current # incorrect:  " << get_characters_incorrect();
 }
 
 void Game:: add_points() {
