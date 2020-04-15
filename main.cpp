@@ -28,7 +28,7 @@ int main(){
     system("CLS");
     //Game phase ready
     game.set_readiness_to_play(true);
-    while(game.get_game_duration() < 60) {
+    while(game.get_game_duration() < 7) {
         game.display_streak();
         game.display_points();
         game.display_characters_correct();
@@ -36,12 +36,12 @@ int main(){
         game.random_characters();
         system("CLS");
     }
-    Scoreboard scoreboard;
-    scoreboard.game_end_greeting();
+    Scoreboard scoreboard(game);
+    /*scoreboard.game_end_greeting();
     scoreboard.calculate_accuracy(game);
     scoreboard.calculate_lpm(game);
     scoreboard.set_date();
     scoreboard.display_stats();
-    cin.ignore();
+    cin.ignore();*/
     return 0;
 }

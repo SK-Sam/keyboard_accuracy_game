@@ -14,18 +14,20 @@
 #include <conio.h>
 #include <random>
 #include <chrono>
-#include "Game.h"
 #include <thread>
 #include <windows.h>
 using namespace std;
 
 
-void Scoreboard:: calculate_lpm(Game game){
-    lpm = game.num_of_correct_characters_per_game / 60;
+void Scoreboard:: calculate_lpm(const Game& game){
+    lpm = game.num_of_correct_characters_per_game / 60.0;
+    cout << game.num_of_correct_characters_per_game << endl;
 }
 
-void Scoreboard::calculate_accuracy(Game game){
-    accuracy = game.num_of_incorrect_characters_per_game / game.num_of_correct_characters_per_game * 100;
+void Scoreboard::calculate_accuracy(const Game& game){
+    //accuracy = (game.num_of_incorrect_characters_per_game / (game.num_of_incorrect_characters_per_game + game.num_of_correct_characters_per_game)) * 100.0;
+    accuracy = 500.0;
+    cout << accuracy << endl;
 }
 
 void Scoreboard::set_date(){
@@ -37,15 +39,21 @@ void Scoreboard::set_date(){
 void Scoreboard::display_stats(){
     cout << "Accuracy: " << accuracy << "\n";
     cout << "Letters Per Minute: " << lpm << "\n";
+    cout << "DISPLAY STATS" << endl;
 }
 void Scoreboard::game_end_greeting() {
     cout << "60 Seconds is up! Here are your statistics: \n";
 }
 
-/*Scoreboard::Scoreboard(Game game)
+Scoreboard::Scoreboard(Game& game)
 {
+    cout << "This is the beginning of the constructor!\n";
     calculate_lpm(game);
+    cout << "AAAA\n";
     calculate_accuracy(game);
     game_end_greeting();
     set_date();
-}*/
+    display_stats();
+    cout << "This is the end of the constructor!\n";
+
+}

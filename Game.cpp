@@ -11,7 +11,7 @@
 #include <conio.h>
 #include <random>
 #include <chrono>
-#include "Scoreboard.h"
+//#include "Scoreboard.h"
 #include <thread>
 #include <windows.h>
 using namespace std;
@@ -85,6 +85,7 @@ int Game:: get_characters_incorrect(){
 
 void Game:: add_to_correct_characters_per_game(){
     num_of_correct_characters_per_game++;
+    cout << num_of_correct_characters_per_game << endl;
 }
 
 void Game:: add_to_incorrect_characters_per_game(){

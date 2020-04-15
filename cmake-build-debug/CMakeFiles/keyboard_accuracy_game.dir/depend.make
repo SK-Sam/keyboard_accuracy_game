@@ -5,6 +5,7 @@ CMakeFiles/keyboard_accuracy_game.dir/Game.cpp.obj: ../Game.cpp
 CMakeFiles/keyboard_accuracy_game.dir/Game.cpp.obj: ../Game.h
 CMakeFiles/keyboard_accuracy_game.dir/Game.cpp.obj: ../Scoreboard.h
 
+CMakeFiles/keyboard_accuracy_game.dir/Scoreboard.cpp.obj: ../Game.h
 CMakeFiles/keyboard_accuracy_game.dir/Scoreboard.cpp.obj: ../Scoreboard.cpp
 CMakeFiles/keyboard_accuracy_game.dir/Scoreboard.cpp.obj: ../Scoreboard.h
 

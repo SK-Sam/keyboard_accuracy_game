@@ -12,14 +12,13 @@
 #include <conio.h>
 #include <random>
 #include <chrono>
-#include "Scoreboard.h"
+//#include "Scoreboard.h"
 #include "Game.h"
 using namespace std;
 
 class Game {
 public:
     friend class Scoreboard;
-
     //Constructors
     Game();
     Game(string n);
