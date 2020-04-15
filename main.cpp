@@ -1,3 +1,6 @@
+
+#include "Scoreboard.h"
+#include "Game.h"
 #include <iostream>
 #include<string>
 #include <stdio.h>
@@ -7,8 +10,7 @@
 #include <random>
 #include <chrono>
 #include <thread>
-#include "Scoreboard.h"
-#include "Game.h"
+#include <Windows.h>
 using namespace std;
 using namespace std::literals::chrono_literals;
 
@@ -34,5 +36,12 @@ int main(){
         game.random_characters();
         system("CLS");
     }
+    Scoreboard scoreboard;
+    scoreboard.game_end_greeting();
+    scoreboard.calculate_accuracy(game);
+    scoreboard.calculate_lpm(game);
+    scoreboard.set_date();
+    scoreboard.display_stats();
+    cin.ignore();
     return 0;
 }

@@ -12,7 +12,6 @@
 #include <random>
 #include <chrono>
 #include "Scoreboard.h"
-#include "Game.h"
 #include <thread>
 #include <windows.h>
 using namespace std;

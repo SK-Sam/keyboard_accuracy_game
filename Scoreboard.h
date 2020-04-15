@@ -10,19 +10,23 @@
 #include <random>
 #include <chrono>
 #include <thread>
-#include "Game.h"
+//#include "Game.h"
 using namespace std;
-using namespace std::literals::chrono_literals;
+class Game;
 
 class Scoreboard{
+public:
+    //Scoreboard(Game game);
+
+    void calculate_lpm(Game);
+    void calculate_accuracy(Game);
+    void set_date();
+    void display_stats();
+    void game_end_greeting();
+
 private:
     float lpm;
     float accuracy;
-
-public:
-    void calculate_lpm(Game game);
-    void calculate_accuracy();
-    void display_stats();
 
 };
 
