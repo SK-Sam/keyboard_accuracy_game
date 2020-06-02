@@ -37,11 +37,6 @@ int main(){
         system("CLS");
     }
     Scoreboard scoreboard(game);
-    /*scoreboard.game_end_greeting();
-    scoreboard.calculate_accuracy(game);
-    scoreboard.calculate_lpm(game);
-    scoreboard.set_date();
-    scoreboard.display_stats();
-    cin.ignore();*/
+    cin.ignore();
     return 0;
 }
