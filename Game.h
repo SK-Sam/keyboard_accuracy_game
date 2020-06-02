@@ -12,7 +12,6 @@
 #include <conio.h>
 #include <random>
 #include <chrono>
-//#include "Scoreboard.h"
 #include "Game.h"
 using namespace std;
 
@@ -62,8 +61,8 @@ private:
     float game_duration = 0;
     bool right_wrong_answer;
     string name;
-    int num_of_correct_characters_per_game = 0;
-    int num_of_incorrect_characters_per_game = 0;
+    double num_of_correct_characters_per_game = 0;
+    double num_of_incorrect_characters_per_game = 0;
     int streak = 0;
     bool ready_to_play;
 };

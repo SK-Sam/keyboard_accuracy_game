@@ -12,7 +12,6 @@
 #include <thread>
 #include "Game.h"
 using namespace std;
-//class Game;
 
 class Scoreboard{
 public:
@@ -22,7 +21,6 @@ public:
     void calculate_accuracy(const Game&);
     void set_date();
     void display_stats(Game&);
-    //void game_end_greeting();
 
 private:
     double lpm;

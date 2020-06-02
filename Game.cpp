@@ -5,14 +5,9 @@
 #include "Game.h"
 #include <iostream>
 #include<string>
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include <conio.h>
 #include <random>
 #include <chrono>
-//#include "Scoreboard.h"
-#include <thread>
 #include <windows.h>
 using namespace std;
 
