@@ -27,6 +27,7 @@ public:
     bool get_rw_answer();
     float get_duration();
     int get_streak();
+    int get_highest_streak();
     bool get_readiness_to_play();
     float get_game_duration();
     int get_points();
@@ -40,6 +41,7 @@ public:
     void add_to_correct_characters_per_game();
     void add_to_incorrect_characters_per_game();
     void streak_counter();
+    void set_highest_streak(int);
     void reset_streak();
     void set_readiness_to_play(bool);
     void add_game_duration(float);
@@ -64,6 +66,7 @@ private:
     double num_of_correct_characters_per_game = 0;
     double num_of_incorrect_characters_per_game = 0;
     int streak = 0;
+    int highest_streak = 0;
     bool ready_to_play;
 };
 

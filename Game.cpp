@@ -45,6 +45,9 @@ void Game:: set_name(string n){
 void Game:: set_readiness_to_play(bool ready){
     ready_to_play = ready;
 }
+void Game:: set_highest_streak(int current_streak){
+    highest_streak = current_streak;
+}
 
 bool Game:: get_readiness_to_play(){
     return ready_to_play;
@@ -56,6 +59,9 @@ float Game:: get_duration(){
 
 int Game:: get_streak(){
     return streak;
+}
+int Game:: get_highest_streak(){
+    return highest_streak;
 }
 
 bool Game:: get_rw_answer(){
@@ -118,6 +124,9 @@ void Game:: random_characters() {
         add_to_correct_characters_per_game();
         add_points();
         streak_counter();
+        if(get_streak() > get_highest_streak()){
+            set_highest_streak(get_streak());
+        }
     }
     else{
         auto end = chrono::high_resolution_clock::now();

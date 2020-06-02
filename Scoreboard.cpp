@@ -36,7 +36,7 @@ string Scoreboard::get_date(){
 
 void Scoreboard::display_stats(Game &game){
     cout << "Total Points: " << game.get_points() << "\n";
-    cout << "Highest Streak: " << "Pending function to solve this" << "\n";
+    cout << "Highest Streak: " << game.get_highest_streak() << "\n";
     cout << "Correct Inputs: " << game.get_characters_correct() << "\n";
     cout << "Incorrect Inputs: " << game.get_characters_incorrect() << "\n";
     cout << "Accuracy: %" << accuracy << "\n";
