@@ -12,8 +12,8 @@
 using namespace std;
 
 
-void Scoreboard:: calculate_lpm(const Game& game){
-    lpm = game.num_of_correct_characters_per_game / 60.0;
+void Scoreboard:: calculate_lps(const Game& game){
+    lps = game.num_of_correct_characters_per_game / 60.0;
 }
 
 void Scoreboard::calculate_accuracy(const Game& game){
@@ -40,7 +40,7 @@ void Scoreboard::display_stats(Game &game){
     cout << "Correct Inputs: " << game.get_characters_correct() << "\n";
     cout << "Incorrect Inputs: " << game.get_characters_incorrect() << "\n";
     cout << "Accuracy: %" << accuracy << "\n";
-    cout << "Letters Per Minute: " << lpm << "\n\n";
+    cout << "Letters Per Second: " << lps << "\n\n";
     cout << "Date of Score: " << get_date() << "\n";
 }
 
@@ -48,7 +48,7 @@ void Scoreboard::display_stats(Game &game){
 Scoreboard::Scoreboard(Game& game)
 {
     cout << "60 Seconds is up! Here are your statistics, " << game.name << ": \n\n\n";
-    calculate_lpm(game);
+    calculate_lps(game);
     calculate_accuracy(game);
     display_stats(game);
 }

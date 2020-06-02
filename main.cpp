@@ -17,7 +17,7 @@ int main(){
     system("CLS");
     //Game phase ready. To be implemented in future
     //game.set_readiness_to_play(true);
-    while(game.get_game_duration() < 7) {
+    while(game.get_game_duration() < 60) {
         game.display_streak();
         game.display_points();
         game.display_characters_correct();

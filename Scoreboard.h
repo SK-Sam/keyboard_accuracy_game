@@ -17,13 +17,13 @@ class Scoreboard{
 public:
     Scoreboard(Game& game);
 
-    void calculate_lpm(const Game&);
+    void calculate_lps(const Game&);
     void calculate_accuracy(const Game&);
     string get_date();
     void display_stats(Game&);
 
 private:
-    double lpm;
+    double lps;
     double accuracy;
 
 };
