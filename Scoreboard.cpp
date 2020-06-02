@@ -25,10 +25,13 @@ void Scoreboard::calculate_accuracy(const Game& game){
     }
 }
 
-void Scoreboard::set_date(){
-    chrono::system_clock::time_point now = chrono::system_clock::now();
-    time_t t_c = chrono::system_clock::to_time_t(now);
-    cout <<"The date is: " <<  put_time(localtime(&t_c), "%F %T");
+string Scoreboard::get_date(){
+    auto now = std::chrono::system_clock::now();
+    auto in_time_t = std::chrono::system_clock::to_time_t(now);
+
+    std::stringstream ss;
+    ss << std::put_time(std::localtime(&in_time_t), "%Y-%m-%d %X");
+    return ss.str();
 }
 
 void Scoreboard::display_stats(Game &game){
@@ -37,7 +40,8 @@ void Scoreboard::display_stats(Game &game){
     cout << "Correct Inputs: " << game.get_characters_correct() << "\n";
     cout << "Incorrect Inputs: " << game.get_characters_incorrect() << "\n";
     cout << "Accuracy: %" << accuracy << "\n";
-    cout << "Letters Per Minute: " << lpm << "\n";
+    cout << "Letters Per Minute: " << lpm << "\n\n";
+    cout << "Date of Score: " << get_date() << "\n";
 }
 
 
@@ -47,5 +51,4 @@ Scoreboard::Scoreboard(Game& game)
     calculate_lpm(game);
     calculate_accuracy(game);
     display_stats(game);
-    set_date();
 }

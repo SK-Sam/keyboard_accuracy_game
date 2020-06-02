@@ -19,7 +19,7 @@ public:
 
     void calculate_lpm(const Game&);
     void calculate_accuracy(const Game&);
-    void set_date();
+    string get_date();
     void display_stats(Game&);
 
 private:
