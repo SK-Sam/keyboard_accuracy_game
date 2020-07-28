@@ -1,3 +1,0 @@
-C:/Users/yeosa/Desktop/keyboard_accuracy_game/cmake-build-debug/CMakeFiles/keyboard_accuracy_game.dir
-C:/Users/yeosa/Desktop/keyboard_accuracy_game/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/yeosa/Desktop/keyboard_accuracy_game/cmake-build-debug/CMakeFiles/rebuild_cache.dir

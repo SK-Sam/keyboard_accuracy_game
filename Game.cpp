@@ -149,19 +149,20 @@ void Game:: reset_streak(){
 }
 
 void Game:: display_streak(){
-    cout << "                                        Current Streak:     " << get_streak();
+    cout << "                                        #Current Streak:          " << get_streak()<< "#";
 }
 
 void Game:: display_points(){
-    cout << "\n                                        Current Points:     " << get_points();
+    cout << "\n                                        #Current Points:          " << get_points()<< "#";
 }
 
 void Game:: display_characters_correct(){
-    cout << "\n                                        Current # correct:  " << get_characters_correct();
+    cout << "\n                                        #Current # correct:       " << get_characters_correct()<< "#";
 }
 
 void Game:: display_characters_incorrect(){
-    cout << "\n                                        Current # incorrect:  " << get_characters_incorrect();
+    cout << "\n                                        #Current # incorrect:     " << get_characters_incorrect() << "#";
+    cout << "\n                                        ############################";
 }
 
 void Game:: add_points() {

@@ -47,7 +47,7 @@ void Scoreboard::display_stats(Game &game){
 
 Scoreboard::Scoreboard(Game& game)
 {
-    cout << "60 Seconds is up! Here are your statistics, " << game.name << ": \n\n\n";
+    cout << "                                     60 Seconds is up! Here are your statistics, " << game.name << ": \n\n\n";
     calculate_lps(game);
     calculate_accuracy(game);
     display_stats(game);
